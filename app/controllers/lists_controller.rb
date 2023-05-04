@@ -4,17 +4,17 @@ class ListsController < ApplicationController
     @list = List.new
   end
   
-  def create
+  def create #新規投稿
     list = List.new(list_params)
     list.save
-    redirect_to '/top'
+    redirect_to list_path(list.id)
   end
     
-  def index
+  def index #タイトル一覧
     @lists = List.all
   end
 
-  def show
+  def show #投稿一覧
     @list = List.find(params[:id])
   end
 
