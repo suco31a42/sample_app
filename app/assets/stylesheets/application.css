@@ -13,3 +13,85 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, h1, nav, .list-coment {
+  font-family: 'Kaushan', cursive, sans-serif;
+}
+
+header {
+  width: 90%;
+  padding: 15px 0;
+  margin: 30px auto 0;
+  text-align: center;
+  border-top: solid 5px #000000;
+}
+
+header .headline {
+  font-size: 32px;
+}
+
+nav {
+  width: 880px;
+  margin: 0 auto;
+  border-bottom: solid 0.7px #000000;
+  border-top: solid 0.7px #000000;
+}
+
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+main {
+  width: 880px;
+  margin: 0 auto;
+}
+
+/*index.htmal*/
+.list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-box {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  position: relative;
+}
+
+.list-coment {
+  width: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.list-body {
+  display: block;
+  color: gray;
+  font-size: 12px;
+  /*要素のブロックからはみ出した部分を隠して非表示にする*/
+  overflow: hidden; 
+  /*テキストを折り返し表示させないようにする*/
+  white-space: nowrap;
+  /*要素のブロックからはみ出したテキストを三点リーダーで省略表示*/
+  text-overflow: ellipsis;
+}
+
+.list-title {
+  font-size: 18px;
+}
