@@ -9,7 +9,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list.id)
     else
-      render :new
+      render :new #エラー表示のときにrenderを使う
     end
   end
     
