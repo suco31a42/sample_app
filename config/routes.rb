@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'homes#top'
+  resources :users do
+    collection do
+      get 'search'
+    end
+  end
+  root to: 'homes#top'
   resources :lists
 
 end
